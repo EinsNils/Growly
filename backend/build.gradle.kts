@@ -28,6 +28,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("com.microsoft.sqlserver:mssql-jdbc:12.8.1.jre11")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0")
     implementation("io.jsonwebtoken:jjwt-api:0.11.5")
 
 
