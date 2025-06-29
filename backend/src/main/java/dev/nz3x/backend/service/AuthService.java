@@ -32,7 +32,7 @@ public class AuthService {
         User.builder()
             .username(request.username())
             .password(passwordEncoder.encode(request.password()))
-            .role(request.role() != null ? request.role() : Role.USER)
+            .role(Role.USER)
             .build();
 
     userRepository.save(user);
