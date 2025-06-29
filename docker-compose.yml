@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  backend:
+    image: ${REGISTRY}/${BACKEND_IMAGE}:${IMAGE_TAG:-latest}
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_DATASOURCE_URL=jdbc:sqlserver://db:1433;databaseName=growly;encrypt=true;trustServerCertificate=true
+      - SPRING_DATASOURCE_USERNAME=sa
+      - SPRING_DATASOURCE_PASSWORD=YourStrong@Passw0rd
+    depends_on:
+      - db
+    networks:
+      - growly-network
+
+  frontend:
+    image: ${REGISTRY}/${FRONTEND_IMAGE}:${IMAGE_TAG:-latest}
+    ports:
+      - "8081:80"
+    depends_on:
+      - backend
+    networks:
+      - growly-network
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=YourStrong@Passw0rd
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+    networks:
+      - growly-network
+
+networks:
+  growly-network:
+    driver: bridge
+
+volumes:
+  mssql-data: 
