@@ -1,20 +1,19 @@
 spring:
+  application:
+    name: backend
   datasource:
-    url: jdbc:sqlserver://localhost:1433;databaseName=growly
+    url: jdbc:sqlserver://localhost:1433;databaseName=growly;encrypt=true;trustServerCertificate=true
     username: sa
     password: YourStrong@Passw0rd
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
     properties:
       hibernate:
+        format_sql: true
         dialect: org.hibernate.dialect.SQLServerDialect
-        
-  application:
-    name: backend
 
 jwt:
   secret: your-256-bit-secret-key-here-make-it-long-and-secure-for-production
