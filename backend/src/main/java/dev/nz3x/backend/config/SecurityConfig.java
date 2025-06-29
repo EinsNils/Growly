@@ -36,7 +36,7 @@ public class SecurityConfig {
             auth ->
                 auth.requestMatchers("/api/auth/**")
                     .permitAll()
-                    .requestMatchers("/hello")
+                    .requestMatchers("/v3/api-docs")
                     .permitAll()
                     .anyRequest()
                     .authenticated())
