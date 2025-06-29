@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
 
-    "generate:api": "openapi-generator-cli generate -i http://localhost:8080/v3/api-docs -g typescript-angular -o src/app/api --skip-validate-spec"
+    "generate:api": "openapi-generator-cli generate -i http://localhost:8080/v3/api-docs -g typescript-angular -o src/app/api/generated --skip-validate-spec"
   },
   "prettier": {
     "overrides": [
