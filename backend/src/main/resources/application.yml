@@ -15,3 +15,7 @@ spring:
         
   application:
     name: backend
+
+jwt:
+  secret: your-256-bit-secret-key-here-make-it-long-and-secure-for-production
+  expiration: 86400000  # 24 hours in milliseconds

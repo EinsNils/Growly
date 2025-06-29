@@ -2,13 +2,16 @@ package dev.nz3x.backend.domain.model;
 
 import dev.nz3x.backend.domain.enums.Role;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
 import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "users")
+@Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
