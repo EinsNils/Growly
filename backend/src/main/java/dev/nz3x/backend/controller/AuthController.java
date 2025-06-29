@@ -39,9 +39,4 @@ public class AuthController {
       return ResponseEntity.badRequest().build();
     }
   }
-
-  @GetMapping("/test")
-  public ResponseEntity<String> test() {
-    return ResponseEntity.ok("Auth endpoint is working!");
-  }
 }
