@@ -7,6 +7,7 @@ import dev.nz3x.backend.dto.requests.LoginRequest;
 import dev.nz3x.backend.dto.requests.RegisterRequest;
 import dev.nz3x.backend.dto.response.AuthResponse;
 import dev.nz3x.backend.repository.UserRepository;
+import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -30,6 +31,7 @@ public class AuthService {
 
     User user =
         User.builder()
+            .id(UUID.randomUUID())
             .username(request.username())
             .password(passwordEncoder.encode(request.password()))
             .role(Role.USER)
