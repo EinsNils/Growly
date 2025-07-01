@@ -56,4 +56,10 @@ public class AuthService {
     String token = jwtConfig.generateToken(user.getUsername(), user.getRole().name());
     return new AuthResponse(token, user.getUsername(), user.getRole().name());
   }
+
+  public void deleteUser(UUID id) {
+    if (userRepository.existsUserById(id)) {
+      userRepository.deleteById(id);
+    }
+  }
 }
