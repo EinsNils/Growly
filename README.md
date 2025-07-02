@@ -1,3 +1,7 @@
+
+![ChatGPT Image 2  Juli 2025, 08_11_11](https://github.com/user-attachments/assets/287eec04-6cfd-497c-a0ff-d155b707dfe2)
+
+
 # 🌱 Growly – Learn. Grow. Repeat.
 
 **Growly** ist eine moderne, modulare Lernplattform, die es Nutzer:innen ermöglicht, neue Fähigkeiten zu erlernen, sich weiterzubilden und individuell zu wachsen – Schritt für Schritt. Ob Einsteiger:in oder Profi – bei Growly findest du die passenden Kurse, Challenges und Tools.
